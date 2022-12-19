@@ -1,201 +1,210 @@
 <html>
-        <head>
-            <title>PROFILE</title>
-        </head>
-        <style>
-            *{
-                box-sizing: border-box;
-            }
-            html,body{
-                padding: 0;
-                margin: 0;
-            }
-            .hori{
-                position: fixed;
-                display: block;
-                width: 100%;
-                background-color: lightgrey;
-                text-align: center;
-                z-index: 1;
-            }
-            .hori > ul > li{
-                display: inline-block;
-                text-align: center;
-                width: 25%;
-                border: 1px solid black;
-                background-color: maroon;
-            }
-            .hori .active{
-                background: #a24857;
-                color: #f8f9f9;
-            }
-            .hori > ul{
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-            }
-            .hori a{
-                text-decoration: none;
-                display: block;
-                font-family: arial;
-            }
-            .hori > ul > li > a:hover{
-                background-color: #a24857;
-                color: white;
-                text-transform: uppercase;
-            }
-            
-            .verti{
-                background-color: lightgrey;
-                width: 170px;
-                height: 100%;
-                position: fixed;
-                top: 40px;
-                left: 0px;
-            }
-            .verti, details > ul{
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-            }
-            .verti > ul > li > a{
-                padding: 10px;
-                background-color: maroon;
-                color: white;
-            }
-            details > summary{
-                list-style-type: none;
-                height: 30px;
-                background-color: maroon;
-                color: lightgrey;
-                padding-left: 10px;
-                border-bottom: 1px solid black;
-                font-family: arial;
-                border-radius: 10px;
-            }
-            details > ul{
-                border-left: 2px solid maroon;
-                border-right: 2px solid maroon;
-                border-bottom: 2px solid maroon;
-                height: 50px;
-            }
-            .details > ul > li > a{
-                color: maroon;
-                margin-left: 5px;
-                font-size:  20px;
-            }
-            .details > ul > li > a:hover{
-                color: black;
-            }
-            details > summary:hover{
-                color: white;
-                background-color:  #a24857;
-                text-transform: uppercase;
-                cursor: pointer;
-            }
-            .card img{
-                width: 150px;
-                border-radius: 70px;
-            }
-            .card{
-                position: relative;
-                margin-left: 500px;
-                padding: 20px;
-                top: 150px;
-                width: 500px;
-                box-shadow: 0 4px 8px 0 rgba(0,0,0,0,2);
-                text-align: center;
-                margin-bottom: 800px;
-            }
-            .title,p{
-                color: grey;
-                font-size: 18px;
-            }
-            card a{
-                text-decoration: none;
-                font-size: 22px;
-                color: black;
-            } 
+<head>
+	<title>PROFILE</title>
 
-           
+	<style type="text/css">
+     
+      * {
+         box-sizing: border-box;
+      }
+      html, body {
+         margin: 0;
+         padding: 0;
+      }
+      .hor{
+        	position: fixed;
+         display: block;
+        	width: 100%;
+        	background-color: lightgrey;	
+         text-align: center;
+         z-index: 1;
+      }
+      .hori > ul > li {
+         display: inline-block;
+         text-align: center;
+         width: 25%; 
+         border: 1px solid black;
+         background-color: maroon;
+      }
+       .hori .active {
+         background:  #A24857;
+         color: #f8f9f9;
+      }
+      .hori > ul {
+         list-style-type: none;
+         margin: 0;
+         padding: 0;
+      }
+      .hori a {
+         text-decoration: none;  
+         display: block;
+         font-family: arial;
 
+      }
+      .hori > ul > li > a {
+         padding: 10px;
+         color: lightgrey;
+      }
+      .hori > ul > li > a:hover {
+         background: #A24857;
+         color: white;
+         text-transform: uppercase;
+      }
+      
+      .vert {
+         background: lightgrey; 
+         width: 170px;
+         height: 100%; 
+         position: fixed;
+         top: 40px;  
+         left: 0px; 
+      }
+      .verti, details > ul {
+         list-style-type: none;
+         margin: 0;
+         padding: 0;
+      }
+      .verti > ul > li > a {
+         padding: 10px;
+         background: maroon;
+         color: white; 
+      }   
+      .verti .active {
+         background: #A24857;
+      }
+      details > summary{
+         list-style-type: none;
+         height: 30px;
+         background-color: maroon;
+         color: lightgrey;
+         padding-left: 10px;
+         border-bottom: 1px solid black;
+         font-family: arial;
+         border-radius: 10px;
+      }
+      details > ul{
+        border-left: 2px solid maroon;
+        border-right: 2px solid maroon; 
+        border-bottom: 2px solid maroon;
+        height: 80px;
+      }
+      details > ul > li > a{
+       color: maroon;
+       margin-left: 5px;
+       font-size: 20px;
+      }
+      details > ul > li > a:hover{
+       color: black;
+      }
+      details > summary:hover{
+       color: white;
+       background-color: #A24857;
+       text-transform: uppercase;
+       cursor: pointer;
+      }
+       .card img{
+        width: 150px;
+        border-radius: 70px;
+       }
+        .card{
+        position: relative;
+        margin-left: 500px;
+        padding: 20px;
+        top: 150px;
+        width: 500px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        text-align: center;
+        margin-bottom: 800px;
+      }
+      .title,p{
+        color: grey;
+        font-size: 18px;
+     }
 
+      .card a {
+        text-decoration: none;
+        font-size: 22px;
+        color: black;
+       }
+     
+	</style>
+</head>
 
-        </style>
-    <body>
-        <div classa="hori">
-                <ul>
-                    <li><a href="profile.html" class="active">Profile</a></li>
-                    <li><a href="travel.html"></a>Travel</li>
-                    <li><a href="career.html"></a>Career</li>
-                </ul>
-        </div>
-            
-        <div class="verti">
-                <details>
-                    <summary>Profile</summary>
-                    <ul>
-                        <li><a href="profile.html#person">Personal Data</a></li>
-                        <li><a href="profile.html#educ">Education</a></li>
-                        <li><a href="profile.html#quote">Favorite Quotes</a></li>
-                    </ul>
+<body> 
+	
+   <div class="hori">  
+         <ul>
+              <li><a href="profile.html" class="active">Profile</a></li>
+              <li><a href="travel.html">Travel</a></li>
+              <li><a href="career.html">Career</a></li>
+        </ul>
+   </div>
 
-                </details>
-                details>
-                    <summary>Travel</summary>
-                    <ul>
-                        <li><a href="travel.html">1st Travel</a></li>
-                        <li><a href="travel.html">2nd Travel</a></li>
-                        <li><a href="travel.html">3rd Travel</a></li>
-                    </ul>
+	<div class="verti"> 
+       <details>
+          <summary>Profile</summary>
+             <ul>
+                 <li><a href="profile.html#prof">Personal Data</a></li>
+                 <li><a href="profile.html#educ">Education</a></li>
+                 <li><a href="profile.html#quote">Favorite Quotes</a></li>
+             </ul>
+       </details>
+       
+        <details>
+         <summary>Travel</summary>
+             <ul>
+                 <li><a href="travel.html">1st Travel</a></li>
+                 <li><a href="#">2nd Travel</a></li>
+                 <li><a href="#">3rd Travel</a></li>
+             </ul>
+        </details>
+       
+         <details>
+          <summary>Career</summary>
+             <ul>
+                <li><a href="career.html">Career 1</a></li>
+                <li><a href="#">Career 2</a></li>
+                <li><a href="#">Career 3</a></li>
+            </ul>
+       </details>
+   </div>  
+   S
+  
+    <!--PROFILE-->    
+  
+   
+<div id="prof"></div>
+    <div class="card">
+        <img src="profile.jpg" alt="randy">
+            <h1>PERSONAL DATA</h1>
+          <p class="title">College of Information Technology</p>
+          <p>NAME: Randy M. Banac</p>
+          <p>AGE:22</p>
+          <p>ADDRESS:Zone 5, Naga Puerto CDO</p>
+          <p>RELIGION: Roman Catholic</p>
+          <p>GENDER: Male</p>
+    </div>
+  
+  <div id="educ"></div>
+     <div class="card">
+           <img src="tcc_small.png" alt="tcc">
+            <h1>EDUCATION</h1>
+          <p class="title">ATTAINMENT</p>
+          <p>Tagoloan Community College</p>
+          <p>Puerto Senior Highschool</p>
+          <p>Puerto Junior Highschool</p>
+          <p>Puero Elementary School</p>
+    </div>
+ 
 
-                </details>
-                details>
-                    <summary>Career</summary>
-                    <ul>
-                        <li><a href="career.html">1st Choice</a></li>
-                        <li><a href="career.html">2nd Choice</a></li>
-                        <li><a href="career.html">3rd Choice</a></li>
-                    </ul>
+  <div id="quote"></div>
+      <div class="card">
+          <img src="tatay.jpg" alt="albert">
+            <h1>FAVORITE QUOTES</h1>
+        
+          <p>“Any man who reads too much and uses his own brain too little falls into lazy habits of thinking.”</p>
+          <p>--Tatay Albert Einstein</p>
+    </div>
 
-                </details>
-            </div>
-
-             <div id="person"></div>
-            <div class="card">
-                <img src="profile.jpg" alt="randy">
-                  <h1>Personal Data</h1>
-                  <p class="title">College Of Information Technology</p>
-                  <p>NAME:Randy Banac</p>
-                  <p>AGE:22</p>
-                  <p>RELIGION:Roman Catholic</p>
-                  <p>GENDER:Male</p>
-            </div>
-            <div id="educ"></div>
-            <div class="card">
-                <img src="tcc_small.png" alt="tcc">
-                  <h1>Education</h1>
-                  <p class="title">Attainment</p>
-                  <p>Tagoloan Community College</p>
-                  <p>Puerto Senior Highschool</p>
-                  <p>Puerto Junior Highschool</p>
-                  <p>Puerto Elementary School</p>
-                  
-            </div>
-            <div id="quote"></div>
-            <div class="card">
-                <img src="tatay.jpg" alt="albert">
-                  <h1>Favorite Quotes</h1>
-                  <p>“Any man who reads too much and uses his own brain too little falls into lazy habits of thinking.”</p>
-                  <p>--Tatay Albert Einstien</p>
-
-            </div>
-
-
-
-    </body>
-
-
-
-
-</html>
+</body>
+</html>  
