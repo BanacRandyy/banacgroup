@@ -1,1 +1,211 @@
+<html>
+        <head>
+            <title>PROFILE</title>
+            <style>
+                    *{
+                        box-sizing:border-box;
+                    }
+                    html,body{
+                        margin:0;
+                        padding:0;
+                    }
+                    .hori{
+                        position:fixed;
+                        display: block;
+                        width: 100%;
+                        background-color: lightgrey;
+                        text-align: center;
+                        z-index: 1;
 
+                    }
+                    .hori > ul > li{
+                        display: inline-block;
+                        text-align: center;
+                        width: 25%;
+                        border: 1px solid black;
+                        background-color: maroon;
+
+                    }
+                    .hori > ul{
+                        list-style-type: none;
+                        margin: 0;
+                        padding: 0;
+                    }
+                    .hori a{
+                        text-decoration: none;
+                        display: block;
+                        font-family: arial;
+                    }
+                    .hori > ul > li > a{
+                        padding: 10px;
+                        color: lightgrey;
+                    }
+                    .hori > ul > li > a:hover{
+                        background: #A24857;
+                        color: white;
+                        text-transform: uppercase;
+                    }
+                    
+                    .verti{
+                        background: lightgrey;
+                        width: 170px;
+                        height: 100%;
+                        position: fixed;
+                        top: 40px;
+                        left: 0px;
+                    }
+                    .verti, details > ul{
+                        list-style-type: none;
+                        margin: 0;
+                        padding: 0;
+                    }
+                    .verti > ul > li > a{
+                        padding: 10px;
+                        background-color: maroon;
+                        color: white;
+                    }
+                    details > summary{
+                        list-style-type: none;
+                        height: 30px;
+                        background-color: maroon;
+                        color: lightgrey;
+                        padding-left: 10px;
+                        border-bottom: 1px solid black;
+                        font-family: arial;
+                        border-radius: 10px;
+                    }
+                     details > ul{
+                        border-left: 2px solid maroon;
+                        border-right: 2px solid maroon;
+                        border-bottom: 2px solid maroon;
+                        height: 80px;
+                     }
+                     details > ul > li > a{
+                        color: maroon;
+                        margin-left: 5px;
+                        font-size: 20px;
+                     }
+                     details > ul > li > a:hover{
+                        color: black;
+                     }
+                     details > summary:hover{
+                        color: white;
+                        background-color: #A24857;
+                        text-transform: uppercase;
+                        cursor: pointer;
+                     }
+
+                     .card{
+                        position: relative;
+                        margin-left: 500px;
+                        padding: 20px;
+                        top: 150px;
+                        width: 500px;
+                        box-shadow: 0 4px 8px 0 rgba(0,0,0,0,2);
+                        text-align: center;
+                        margin-bottom: 800px;
+                     }
+                     .title,p{
+                        color: grey;
+                        font-size: 15px;
+                     }
+                     .card a{
+                        text-decoration: none;
+                        font-size: 22px;
+                        color: black;
+                     }
+
+
+
+
+
+            </style>
+        </head>
+            <body>
+                <div class="hori">
+                    <ul>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="travel.html">Travel</a></li>
+                        <li><a href="career.html">Career</a></li>
+                    </ul>
+                </div>
+                <div class="verti">
+                    <details>
+                          <summary>Profile</summary>
+                            <ul>
+                                <li><a href="profile.html">Personal Data</a></li>
+                                <li><a href="profile.html">Education</a></li>
+                                <li><a href="profile.html">Favorite Quotes</a></li>
+                            </ul>
+
+                    </details>
+
+
+
+                </div>
+                <div class="verti">
+                    <details>
+                          <summary>Travel</summary>
+                            <ul>
+                                <li><a href="travel.html">1st Travel</a></li>
+                                <li><a href="travel.html">2nd Travel</a></li>
+                                <li><a href="travel.html">3rd Travel</a></li>
+                            </ul>
+
+                    </details>
+
+
+
+                </div>
+                <div class="verti">
+                    <details>
+                          <summary>Career</summary>
+                            <ul>
+                                <li><a href="career.html">Career 1</a></li>
+                                <li><a href="career.html">Career 2</a></li>
+                                <li><a href="career.html">Career 3</a></li>
+                            </ul>
+
+                    </details>
+
+
+
+                </div>
+                <div class="card">
+                    <img src="profile.jpg" alt="randy">
+                     <h1>PERSONAL DATA</h1>
+                     <p class="active">College Of Information Technology</p>
+                     <p>NAME:Randy M. Banac</p>
+                     <p>AGE:22</p>
+                     <p>ADDRESS:Zone 5 Naga, Puerto CDO</p>
+                     <p>RELIGION:Roman Catholic</p>
+                     <p>GENDER:Male</p>
+                </div>
+                <div class="card">
+                    <img src="tcc_small.png" alt="tcc">
+                     <h1>EDUCATION</h1>
+                     <p class="active">ATTAINMENT</p>
+                     <p>Tagoloan Community College</p>
+                     <p>Puerto Senior Highschool</p>
+                     <p>Puerto Junior Highschool</p>
+                     <p>Puerto Elementary School</p>
+                </div>
+               
+                <div class="card">
+                    <img src="tatay.jpg" alt="albert">
+                     <h1>Favorite Quotes</h1>
+
+                     <p>“Everybody is a genius. But if you judge a fish by its ability to climb a tree, it will live its whole life believing that it is stupid.”</p>
+                     <p>--Tatay Albert Einstein</p>
+                     
+                </div>
+
+
+
+
+
+
+
+
+            </body>
+</html>
