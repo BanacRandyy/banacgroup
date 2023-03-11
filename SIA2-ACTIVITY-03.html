@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Validation </title>
+  <style>
+  
+html,body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.head{
+  text-align: center;
+  padding: 5px;
+  margin-bottom: 20px;
+  border-bottom: 4px solid #013775;
+  background-color: #FDBE25;
+}
+form{
+  width: 300px;
+  margin: 0 auto;
+  padding: 50px;
+  box-shadow: 0 0 10px black;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+label {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+label.required::after {
+  content: "*";
+  color: red;
+  margin-left: 5px;
+}
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="email"] {
+  font-size: 16px;
+  padding: 5px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  width: 300px;
+}
+
+select {
+  font-size: 16px;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  width: 300px;
+  height: 40px; 
+}
+
+select:hover {
+  border-color: #aaa;
+}
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+button[type="submit"] {
+  background-color: #FDBE25;
+  border: none;
+  color: #013775;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  margin: 50px 200px;
+}
+button[type="submit"]:hover {
+  background-color: blue;
+  color: white;
+}
+
+/* if ma error */
+.form-group.error {
+  border: 2px solid red;
+}
+
+.error-message {
+  display: block;
+}
+.error-message.valid {
+  display: none;
+}
+footer {
+  background-color: #f5f5f5;
+  padding: 10px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+  </style>
+</head>
+<body>
+    
+  <div class="head">
+      <h1 style="color: #013775;">Course Registration Form</h1>
+  </div>
+  
+
+  <form id="form">
+    <div class="form-group">
+            <label for="firstname" class="required">Firstname:</label>
+            <input type="text" id="firstname" name="firstname" class="form-control" required>
+            <span class="error-message" id="firstname-error"></span>
+    </div>
+
+    <div class="form-group">
+            <label for="lastname" class="required">Lastname</label>
+            <input type="text" id="lastname" name="lastname" class="form-control" required>
+            <span class="error-message" id="lastname-error"></span>
+    </div>
+
+    <div class="form-group">
+            <label for="studentId" class="required">Student ID</label>
+            <input type="text" id="studentId" name="studentId" class="form-control" maxlength="8" required>
+            <span class="error-message" id="studentid-error"></span>
+    </div>
+
+    <div class="form-group">
+            <label for="ssn" class="required">Last four digits of your Social Security Number</label>
+            <input type="text" id="ssn" name="ssn" class="form-control" maxlength="4" required>
+            <span class="error-message" id="ssn-error"></span>
+    </div>
+
+    <div class="form-group">
+            <label for="address" class="required">Address</label>
+            <input type="text" id="address" name="address" class="form-control" required>
+            <span class="error-message" id="address-error"></span>
+    </div>
+   
+    <div class="form-group">
+             <label for="city" class="required">City:</label>
+             <input type="text" id="city" name="city" class="form-control" required>
+             <span class="error-message" id="city-error"></span>
+    </div>
+     
+     <div class="form-group">
+             <label for="zip" class="required">Zip Code:</label>
+             <input type="text" id="zip" name="zip" maxlength="4" required>
+             <span class="error-message" id="zip-error"></span>
+
+        <label for="state" class="required">State:</label>
+            <select id="state" name="state" required>
+                <option value=""></option>
+                <option value="PH">Philippines</option>
+                <option value="AL">Alabama</option>
+                <option value="AK">Alaska</option>
+                <option value="AZ">Arizona</option>
+                <option value="AR">Arkansas</option>
+            </select>
+      </div>
+
+      <div class="form-group">
+              <label for="phone" class="required">Phone</label>
+              <input type="text" id="phone" name="phone" class="form-control" maxlength="11" required/>
+              <span class="error-message" id="phone-error"></span>
+       </div>
+
+       <div class="form-group">
+              <label for="email" class="required">Email</label>
+              <input type="email" id="email" name="email" class="form-control" required />
+              <span class="error-message" id="email-error"></span>
+       </div>
+
+    
+    <button type="submit" id="submitButton">Submit</button>
+ <footer>
+         <p>&copy; 2023 Activity 03 SIA. All rights reserved.</p>
+         <p><i>Randy M. Banac BSIT-3B</i></p>
+</footer>
+  </form>
+
+  <script>
+const firstnameInput = document.getElementById("firstname");
+const lastnameInput = document.getElementById("lastname");
+const studentIdInput = document.getElementById("studentId");
+const ssnInput = document.getElementById("ssn");
+const addressInput = document.getElementById("address");
+const cityInput = document.getElementById("city");
+const zipInput = document.getElementById("zip");
+const phoneInput = document.getElementById("phone");
+const emailInput = document.getElementById("email");
+
+
+
+const firstnameError = document.getElementById("firstname-error");
+const lastnameError = document.getElementById("lastname-error");
+const studentIdError = document.getElementById("studentid-error");
+const ssnError = document.getElementById("ssn-error");
+const addressError = document.getElementById("address-error");
+const cityError = document.getElementById("city-error");
+const zipError = document.getElementById("zip-error");
+const phoneError = document.getElementById("phone-error");
+const emailError = document.getElementById("email-error");
+
+
+
+firstnameInput.addEventListener("input", function() {
+  if (!/^[a-zA-Z]+$/.test(firstnameInput.value)) {
+    firstnameError.textContent = "First name can only contain letters";
+    firstnameError.style.display = "block";
+  } else {
+    firstnameError.style.display = "none";
+  }
+});
+
+lastnameInput.addEventListener("input", function() {
+  if (!/^[a-zA-Z]+$/.test(lastnameInput.value)) {
+    lastnameError.textContent = "Last name can only contain letters";
+    lastnameError.style.display = "block";
+  } else {
+    lastnameError.style.display = "none";
+  }
+});
+
+studentIdInput.addEventListener("input", function() {
+  if (studentIdInput.value.length < 8) {
+    studentIdError.textContent = "Student ID must be at least 8 characters";
+    studentIdError.style.display = "block";
+  } else if (!/^[0-9]+$/.test(studentIdInput.value)) {
+    studentIdError.textContent = "Student ID can only contain numbers";
+    studentIdError.style.display = "block";
+  } else {
+    studentIdError.style.display = "none";
+  }
+});
+
+ssnInput.addEventListener("input", function() {
+  if (!/^[0-9]+$/.test(ssnInput.value)) {
+    ssnError.textContent = "Input must contain numbers";
+    ssnError.style.display = "block";
+  } else if (ssnInput.value.length !== 4) {
+    ssnError.textContent = "Number must be 4 characters";
+    ssnError.style.display = "block";
+  } else {
+    ssnError.style.display = "none";
+  }
+});
+
+addressInput.addEventListener("input", function() {
+  if (!addressInput.value) {
+    addressError.textContent = "Please fill in this field";
+    addressError.style.display = "block";
+  } else {
+    addressError.style.display = "none";
+  }
+});
+
+cityInput.addEventListener("input", function() {
+  if (!cityInput.value) {
+    cityError.textContent = "Please fill in this field";
+    cityError.style.display = "block";
+  } else {
+    cityError.style.display = "none";
+  }
+});
+
+zipInput.addEventListener("input", function() {
+  if (!/^[0-9]+$/.test(zipInput.value)) {
+    zipError.textContent = "Input must contain numbers";
+    zipError.style.display = "block";
+  } else if (zipInput.value.length !== 4) {
+    zipError.textContent = "Number must be 4 characters";
+    zipErrorstyle.display = "block";
+  } else {
+    zipError.style.display = "none";
+  }
+});
+
+phoneInput.addEventListener("input", function() {
+  if (phoneInput.value.trim() === "") {
+    phoneError.textContent = "Please fill in this field";
+    phoneError.style.display = "block";
+  } else if (!/^[0-9]+$/.test(phoneInput.value)) {
+    phoneError.textContent = "Phone must contain numbers";
+    phoneError.style.display = "block";
+  } else if (phoneInput.value.length !== 11) {
+    phoneError.textContent = "Number must be 11 characters";
+    phoneError.style.display = "block";
+  } else {
+    phoneError.style.display = "none";
+  }
+});
+
+emailInput.addEventListener("input", function() {
+  if (emailInput.value.trim() === "") {
+    emailError.textContent = "Please fill in this field";
+    emailError.style.display = "block";
+  } else if (!validateEmail(emailInput.value)) {
+    emailError.textContent = "Please enter a valid email address";
+    emailError.style.display = "block";
+  } else {
+    emailError.style.display = "none";
+  }
+});
+
+function validateEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+  </script>
+
+</body>
+</html>
